@@ -1,2 +1,2 @@
 #!bin/bash
-grep -v 'bin' /etc/passwd
+awk -F: '!/bin/ && $7!="/sbin/nologin" {print}' /etc/passwd

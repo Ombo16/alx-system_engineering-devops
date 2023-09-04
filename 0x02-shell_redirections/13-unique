@@ -1,2 +1,2 @@
 #!/bin/bash
-sort input.txt | uniq -u | awk '{if (++count[$0] == 1) print}'
+grep -o -w -F -f input.txt input.txt | sort | uniq -u
